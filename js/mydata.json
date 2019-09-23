@@ -1,0 +1,27 @@
+[
+    {
+        "name":"Rajesh",
+        "age":23,
+        "dob":"21/03/1991",
+        "college":"ASIET"
+    },
+    {
+        "name":"Tom",
+        "age":25,
+        "dob":"23/03/1995",
+        "college":"ASIET"   
+    },
+    {
+        "name":"Manu",
+        "age":28,
+        "dob":"23/03/1990",
+        "college":"ASIET"   
+    },
+    {
+        "name":"Rahul",
+        "age":31,
+        "dob":"23/03/1989",
+        "college":"ASIET"   
+    }
+
+]

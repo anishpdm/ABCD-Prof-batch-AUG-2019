@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<script>
+$(document).ready( ()=>{
+
+    add= (a,b,callback)=>{
+var z=a+b;
+
+
+callback(z);
+
+}
+
+display=(result)=>{
+    console.log("Task Completed. Result is"+result)
+}
+
+$('#addbtn').click( ()=>{
+    var a= parseInt( $('#num1').val() );
+    var b= parseInt ($('#num2').val() );
+
+    add(a,b,display);
+} );
+  
+} );
+
+</script>
+
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-12">
+<form>
+        <table class="table">
+                <tr>
+                    <td>Number 1</td>
+                    <td> <input type="text" id="num1" class="form-control"></td>
+                </tr>
+                <tr>
+                        <td>Number 2</td>
+                        <td> <input type="text" id="num2" class="form-control"></td>
+                    </tr>
+                    <tr>
+                            <td></td>
+                            <td><Button class="btn btn-info" id="addbtn">ADD </Button></td>
+                        </tr>
+            </table>
+
+</form>
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

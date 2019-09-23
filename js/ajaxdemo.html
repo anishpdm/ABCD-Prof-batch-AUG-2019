@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12">
+<form action="">
+        <Button type="button" id="mybutton">Show Students</Button>
+
+</form>
+
+            <div id="result">
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+   
+<script>
+    $(document).ready( ()=>{
+
+      $("#mybutton").click(()=>{
+          console.log('Test');
+        $.ajax( {
+            type:"GET",
+            url:"https://jsonplaceholder.typicode.com/photos",
+            success: (response)=>{
+                console.log(response);
+                var output="<table class='table'> <tr> <th> Title </th> <th> username </th> <th> email </th> <th>  Street</th> </tr>";
+           
+                    for(var i in response){
+                        var title=response[i].title;
+                        var url=response[i].url;
+                       
+                    output+="<tr> <td>"+title+" </td> <td><img src=' "+url+" ' style='height:150px;width:150px' />  </td>  </tr>";    
+                    }
+
+                    output+="</table>";
+                    $('#result').html(output);
+           
+                }
+        } );
+      })
+
+    } );
+</script>
+</body>
+</html>

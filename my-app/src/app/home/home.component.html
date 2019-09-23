@@ -1,0 +1,8 @@
+<div>
+        <input type="text" [(ngModel)]="course"  /> 
+        <h1>Welcome {{name}}. Thank Your joining the course </h1>  <p [innerText]="course" > </p>
+          
+        <Button [disabled]="!buttonactive"   (click)="changeCourse()"> Apply For the Course</Button>
+          <!-- .  </h1> -->
+      
+      </div>
