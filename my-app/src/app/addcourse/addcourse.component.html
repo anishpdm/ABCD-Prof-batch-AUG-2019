@@ -1,37 +1,40 @@
 <div class="row">
     <div class="col col-12 col-sm-2 col-md-2"></div>
     <div class="col col-12 col-sm-8 col-md-8">
-<table class="table">
-    <tr>
-        <td>Course Title</td>
-        <td><input type="text" class="form-control"> </td>
-    </tr>
-    <tr>
-            <td>Course Description</td>
-            <td> <textarea class="form-control"cols="20" rows="5"></textarea></td>
-        </tr>
-    <tr>
-            <td>Course Duration</td>
-            <td><input type="text" class="form-control"> </td>
-        </tr>
-
+<form (ngSubmit)="readValues(mydata)" #mydata="ngForm">
+    <table class="table">
         <tr>
-                <td>Course Venue</td>
-                <td><input type="text" class="form-control"> </td>
+            <td>Course Title</td>
+            <td><input type="text" class="form-control" name="courseTitle" ngModel> </td>
+        </tr>
+        <tr>
+                <td>Course Description</td>
+                <td> <textarea class="form-control"cols="20" rows="5" name="courseDescription" ngModel></textarea></td>
             </tr>
-
-
+        <tr>
+                <td>Course Duration</td>
+                <td><input type="text" class="form-control" name="courseDuration" ngModel> </td>
+            </tr>
+    
             <tr>
-                    <td>Course Date</td>
-                    <td><input type="date" class="form-control"> </td>
+                    <td>Course Venue</td>
+                    <td><input type="text" class="form-control" name="courseVenue" ngModel> </td>
                 </tr>
+    
+    
                 <tr>
-                        <td> </td>
-                        <td> <Button class="btn btn-danger"> SUBMIT</Button> </td>
+                        <td>Course Date</td>
+                        <td><input type="date" class="form-control" name="courseDate" ngModel> </td>
                     </tr>
+                    <tr>
+                            <td> </td>
+                            <td> <Button type="submit" class="btn btn-danger"> SUBMIT</Button> </td>
+                        </tr>
+    
+    </table>
+    
 
-</table>
-
+</form>
     </div>
 
     <div class="col col-12 col-sm-2 col-md-2"></div>

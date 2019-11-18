@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { AddcourseComponent } from './addcourse/addcourse.component';
 import { ViewcourseComponent } from './viewcourse/viewcourse.component';
 import {Routes,RouterModule} from '@angular/router'
+import {HttpClientModule} from '@angular/common/http'
+
 
 const appRoutes:Routes=[
   {path:'',component:HomeComponent},
@@ -25,6 +27,7 @@ const appRoutes:Routes=[
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
